@@ -1,0 +1,12 @@
+<div class="container mt-4  col-4 text-center ">
+    <div class="card">
+      <div class="card-header"><strong>{{liv.titre | titlecase}}</strong></div>
+      <div class="card-body"><p>Auteur : {{liv.auteur}}</p>
+      <p>Catégorie : {{liv.categorie | uppercase}}</p>
+      <p [ngClass]="(liv.nouveau)?'badge bg-warning':'badge bg-primary'"> Prix: {{liv.prix | number : ".3" }} DT</p>
+
+      </div> 
+      <div class="card-footer" ><button class="btn btn-dark" (click)="onRevenir()">Retour</button></div>
+    </div>
+  
+</div>

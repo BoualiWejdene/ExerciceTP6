@@ -1,0 +1,20 @@
+<div class="container mt-3">
+    <h2>Liste des livres</h2>    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Titre</th>
+          <th>Infos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let l of livres">
+          <td>{{l.id}}</td>
+          <td>{{l.titre}}</td>
+          <td><button [routerLink]="['/livres',l.id]" class="btn btn-info">Infos</button></td>
+        </tr>
+   
+      </tbody>
+    </table>
+  </div>
